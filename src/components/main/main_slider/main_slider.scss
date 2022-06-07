@@ -1,0 +1,139 @@
+.main_slider {
+  padding-top: 179px;
+  background: url('../img/main/main_slider/main_slider_bg.jpg') center / cover no-repeat;
+
+  @media ($tablet2) {
+    padding-top: 70px;
+  }
+}
+.main_slider__content {
+  padding: 78px 0;
+  position: relative;
+  @media ($tablet3) {
+    padding: 40px 0 75px;
+  }
+}
+.main_slider__slider {
+  overflow: hidden;
+}
+.main_slider__slide_container {
+  max-width: 650px;
+}
+.main_slider__title {
+  color: #ffffff;
+}
+.main_slider__list {
+  margin-top: 35px;
+  padding-left: 20px;
+  li {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+  }
+  li::marker {
+    color: #FFA113;
+  }
+  @media ($tablet3) {
+    margin-top: 20px;
+  }
+}
+.main_slider__btn {
+  margin-top: 50px;
+  width: 203px;
+  @media ($tablet3) {
+    margin-top: 30px;
+  }
+  @media ($mobileMiddle) {
+    width: auto;
+  }
+}
+.main_slider__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  position: absolute;
+  bottom: 40px;
+  text-align: center;
+
+  .swiper-pagination-bullet {
+    margin: 0 7.5px;
+    width: 6px;
+    height: 6px;
+    background: #FFFFFF;
+    opacity: 0.5;
+    &.swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}
+
+.main_slider__btn_next,
+.main_slider__btn_prev {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.2s;
+  background: rgba(255, 255, 255, 0.15);
+  @media ($desktopBig) {
+    top: auto;
+    bottom: -10px;
+  }
+  &.swiper-button-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  &:hover {
+    @media ($tablet2Max) {
+      background: #FFFFFF;
+      &::after,
+      &::before {
+        background: #055FB3;
+      }
+    }
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    background: #ffffff;
+    width: 12px;
+    height: 2px;
+    transition: 0.25s;
+    left: calc(50% - 5px);
+  }
+  &::after {
+    top: 20px;
+    transform: rotate(45deg);
+  }
+  &::before {
+    bottom: 20px;
+    transform: rotate(-45deg);
+  }
+  @media ($tablet2) {
+    display: none;
+  }
+}
+
+.main_slider__btn_next {
+  right: -120px;
+  @media ($desktopSuperBig) {
+    right: -70px;
+  }
+  @media ($desktopBig) {
+    right: auto;
+    left: 65px;
+  }
+}
+
+.main_slider__btn_prev {
+  left: -120px;
+  transform: translateY(-50%) rotate(180deg);
+  @media ($desktopSuperBig) {
+    left: -70px;
+  }
+  @media ($desktopBig) {
+    left: 0;
+  }
+}

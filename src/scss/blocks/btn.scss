@@ -1,0 +1,23 @@
+.btn {
+  background: #FFA113;
+  border-radius: 3px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0F1011;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.25s;
+
+  &:hover {
+    @media ($tablet2Max) {
+      background: #EC8E00;
+    }
+  }
+  &:active {
+    background: #EC8E00;
+    color: #055FB3;
+  }
+}

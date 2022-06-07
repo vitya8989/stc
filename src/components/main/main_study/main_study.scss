@@ -1,0 +1,223 @@
+.main_study {
+  @media ($tablet2) {
+    display: none;
+  }
+}
+.main_study__row {
+  margin-top: 60px;
+  display: flex;
+}
+.main_study__left {
+  width: 321px;
+  flex: 0 0 auto;
+  margin-right: 120px;
+  @media ($desktop) {
+    margin-right: 60px;
+  }
+}
+.main_study__right {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main_study__btn {
+  width: 231px;
+  margin-top: 20px;
+}
+.main_study__animation {
+  height: 321px;
+  position: relative;
+}
+.main_study__animation_center {
+  position: absolute;
+  left: calc(50% - 45px);
+  top: calc(50% - 45px);
+  width: 90px;
+  height: 90px;
+  z-index: 5;
+}
+.main_study__animation_bg_icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #E4F2FF;
+  box-shadow: 0 0 8px rgba(255, 208, 44, 0.4);
+}
+
+.orange_dot {
+  background: #FBE7B5;
+  border-radius: 50%;
+  position: absolute;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: #FFA113;
+  }
+
+  &.this--small {
+    width: 9px;
+    height: 9px;
+    &::after {
+      width: 4px;
+      height: 4px;
+    }
+  }
+  &.this--middle {
+    width: 12px;
+    height: 12px;
+    &::after {
+      width: 7px;
+      height: 7px;
+    }
+  }
+  &.this--big {
+    width: 17px;
+    height: 17px;
+    &::after {
+      width: 9px;
+      height: 9px;
+    }
+  }
+}
+
+.main_study__animation_first_round {
+  position: absolute;
+  width: 116px;
+  height: 116px;
+  left: calc(50% - 58px);
+  top: calc(50% - 58px);
+  border: 2px solid #055FB3;
+  border-radius: 50%;
+  z-index: 4;
+  animation: drive_right 12s linear infinite;
+
+  .orange_dot {
+    left: 19px;
+    top: 4px;
+  }
+}
+
+.main_study__animation_second_round {
+  position: absolute;
+  width: 192px;
+  height: 192px;
+  left: calc(50% - 96px);
+  top: calc(50% - 96px);
+  border: 2px dashed rgba(5,95,179,0.3);
+  border-radius: 50%;
+  z-index: 3;
+  .orange_dot {
+    left: 10px;
+    bottom: 33px;
+  }
+  .main_study__animation_bg_icon {
+    left: 32px;
+    top: -17px;
+    width: 52px;
+    height: 52px;
+    animation: drive_right 11s linear infinite;
+  }
+}
+.main_study__animation_second_round_hide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: drive_left 11s linear infinite;
+}
+
+.main_study__animation_third_round {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+  border: 2px solid #055FB3;
+  left: calc(50% - 128px);
+  top: calc(50% - 128px);
+  border-radius: 50%;
+  z-index: 2;
+  animation: drive_right 11s linear infinite;
+
+  .orange_dot {
+    right: 5px;
+    top: 65px;
+  }
+  .main_study__animation_bg_icon {
+    width: 52px;
+    height: 52px;
+    animation: drive_left 11s linear infinite;
+  }
+  .main_study__animation_bg_icon:first-of-type {
+    right: 15px;
+    top: 5px;
+  }
+  .main_study__animation_bg_icon:nth-of-type(2) {
+    right: 0;
+    bottom: 20px;
+  }
+  .main_study__animation_bg_icon:nth-of-type(3) {
+    left: 65px;
+    bottom: -22px;
+  }
+  .main_study__animation_bg_icon:nth-of-type(4) {
+    left: -25px;
+    top: 100px;
+  }
+}
+
+.main_study__animation_fourth_round {
+  border: 2px dashed rgba(5,95,179,0.3);
+  width: 321px;
+  height: 321px;
+  position: absolute;
+  left: calc(50% - 160.5px);
+  top: calc(50% - 160.5px);
+  border-radius: 50%;
+  z-index: 1;
+  .orange_dot:first-of-type {
+    left: 90px;
+    top: 2px;
+  }
+  .orange_dot:last-of-type {
+    right: 75px;
+    bottom: 9px;
+  }
+}
+.main_study__animation_fourth_round_hide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  animation: drive_left 12s linear infinite;
+}
+
+@keyframes drive_right {
+
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(180deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes drive_left {
+
+  0%{
+    transform: rotate(0);
+  }
+  50%{
+    transform: rotate(-180deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}

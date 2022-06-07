@@ -1,0 +1,85 @@
+@import "null";
+@import "variables";
+
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+
+@import "fonts";
+
+html {
+	font-size: 10px;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.62;
+	font-family: Montserrat, sans-serif;
+	font-weight: 400;
+	color: #0F1011;
+	@media ($tablet3) {
+		font-size: 1.4rem;
+		line-height: 1.71;
+	}
+
+	&.this--overflow {
+		overflow: hidden;
+	}
+}
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 1320px;
+	padding: 0 20px;
+	margin: 0 auto;
+}
+.section {
+	padding: 100px 0;
+	&.this--top {
+		padding: 100px 0 0 0;
+		@media ($tablet3) {
+			padding: 50px 0 0 0;
+		}
+	}
+	&.this--bottom {
+		padding: 0 0 100px 0;
+		@media ($tablet3) {
+			padding: 0 0 50px 0;
+		}
+	}
+
+	@media ($tablet3) {
+		padding: 50px 0;
+	}
+}
+main {
+	flex: 1 0 auto;
+	padding-top: 179px;
+	&.this--pt_0 {
+		padding-top: 0;
+	}
+}
+
+@import "./blocks/title";
+@import "./blocks/btn";
+
+@import "../components/header/header";
+@import "../components/footer/footer";
+
+@import "../components/main/main_slider/main_slider";
+@import "../components/main/main_news/main_news";
+@import "../components/main/main_about/main_about";
+@import "../components/main/main_benefits/main_benefits";
+@import "../components/main/main_activities/main_activities";
+@import "../components/main/main_team/main_team";
+@import "../components/main/main_study/main_study";
+@import "../components/main/main_vacancies/main_vacancies";
