@@ -17,7 +17,7 @@ function mainNewsTabletChange959(e) {
            mainNewsMobSlider = new Swiper('.main_news__mob_slider', {
                speed: 700,
                slidesPerView: 1,
-               spaceBetween: 30,
+               spaceBetween: 20,
                pagination: {
                    el: '.main_news__mob_slider_pagination',
                    clickable: true,
@@ -25,7 +25,7 @@ function mainNewsTabletChange959(e) {
                breakpoints: {
                    639: {
                        slidesPerView: 2,
-                       spaceBetween: 30
+                       spaceBetween: 20
                    }
                }
            });
