@@ -1,6 +1,7 @@
 new Swiper('.main_slider__slider', {
     speed: 700,
     slidesPerView: 1,
+    spaceBetween: 20,
     navigation: {
         nextEl: '.main_slider__btn_next',
         prevEl: '.main_slider__btn_prev'
