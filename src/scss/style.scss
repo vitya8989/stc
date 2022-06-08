@@ -22,10 +22,6 @@ body {
 	font-family: Montserrat, sans-serif;
 	font-weight: 400;
 	color: #0F1011;
-	@media ($tablet3) {
-		font-size: 1.4rem;
-		line-height: 1.71;
-	}
 
 	&.this--overflow {
 		overflow: hidden;
@@ -64,16 +60,27 @@ body {
 main {
 	flex: 1 0 auto;
 	padding-top: 179px;
+
+	@media ($tablet2) {
+		padding-top: 70px;
+	}
 	&.this--pt_0 {
 		padding-top: 0;
 	}
 }
 
+li::marker {
+	color: #FFA113;
+}
+
 @import "./blocks/title";
 @import "./blocks/btn";
+@import "./blocks/card";
 
 @import "../components/header/header";
 @import "../components/footer/footer";
+
+@import "../components/all/counts/counts";
 
 @import "../components/main/main_slider/main_slider";
 @import "../components/main/main_news/main_news";
@@ -83,3 +90,10 @@ main {
 @import "../components/main/main_team/main_team";
 @import "../components/main/main_study/main_study";
 @import "../components/main/main_vacancies/main_vacancies";
+
+@import "../components/about/about_info/about_info";
+@import "../components/about/about_qr/about_qr";
+
+@import "../components/patents/patents_top/patents_top";
+@import "../components/patents/patents_system/patents_system";
+@import "../components/patents/patents_bottom/patents_bottom";

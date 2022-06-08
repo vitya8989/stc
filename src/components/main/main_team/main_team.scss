@@ -47,12 +47,15 @@
   margin-top: 20px;
 }
 .main_team__slider_wr {
-  margin-top: 50px;
+  margin-top: 60px;
 }
 .default_slider__wr {
-  padding-top: 70px;
+  padding-top: 60px;
   padding-bottom: 50px;
   position: relative;
+  @media ($tablet2) {
+    padding-top: 30px;
+  }
 }
 .default_slider {
   overflow: hidden;
@@ -63,6 +66,10 @@
   bottom: -5px;
   text-align: center;
 
+  @media ($tablet2) {
+    display: none;
+  }
+
   .swiper-pagination-bullet {
     margin: 0 7.5px;
     width: 6px;
@@ -71,6 +78,16 @@
     opacity: 0.5;
     &.swiper-pagination-bullet-active {
       opacity: 1;
+    }
+  }
+
+  .default_slider__wr.this--light & {
+    .swiper-pagination-bullet {
+      background: #055FB3;
+      opacity: 0.2;
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
     }
   }
 }
@@ -88,8 +105,13 @@
   transition: 0.2s;
   background: rgba(255, 255, 255, 0.15);
   @media ($desktopBig) {
-    top: 25px;
+    top: 15px;
   }
+  @media ($tablet2) {
+    top: auto;
+    bottom: -35px;
+  }
+
   &.swiper-button-disabled {
     opacity: 0.3;
     pointer-events: none;
@@ -101,6 +123,29 @@
       &::before {
         background: #055FB3;
       }
+    }
+  }
+
+  .default_slider__wr.this--light & {
+    background: rgba(5, 95, 179, 0.2);
+    &:hover {
+      @media ($tablet2Max) {
+        background: #055FB3;
+        &::after,
+        &::before {
+          background: #ffffff;
+        }
+      }
+    }
+  }
+  .default_slider__wr.this--cards & {
+    top: calc(50% - 45px);
+    @media ($desktopBig) {
+      top: 15px;
+    }
+    @media ($tablet2) {
+      top: auto;
+      bottom: -35px;
     }
   }
 
@@ -122,9 +167,6 @@
     bottom: 20px;
     transform: rotate(-45deg);
   }
-  @media ($tablet2) {
-    display: none;
-  }
 }
 
 .default_slider__btn_next {
@@ -134,6 +176,9 @@
   }
   @media ($desktopBig) {
     right: 0;
+  }
+  @media ($tablet2) {
+    right: calc(50% - 100px);
   }
 }
 
@@ -146,6 +191,10 @@
   @media ($desktopBig) {
     left: auto;
     right: 65px;
+  }
+  @media ($tablet2) {
+    right: auto;
+    left: calc(50% - 100px);
   }
 }
 .default_slider__slide_img {

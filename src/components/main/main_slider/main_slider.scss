@@ -1,4 +1,5 @@
 .main_slider {
+  position: relative;
   padding-top: 179px;
   background: url('../img/main/main_slider/main_slider_bg.jpg') center / cover no-repeat;
 
@@ -28,9 +29,10 @@
   li {
     color: #FFFFFF;
     margin-bottom: 15px;
-  }
-  li::marker {
-    color: #FFA113;
+    @media ($tablet3) {
+      font-size: 1.4rem;
+      line-height: 1.71;
+    }
   }
   @media ($tablet3) {
     margin-top: 20px;
@@ -138,9 +140,12 @@
   }
 }
 
-.main_slider__slide_video {
-  padding-top: 41.5625%;
-  position: relative;
+.main_slider__video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
 
   video {
     position: absolute;
