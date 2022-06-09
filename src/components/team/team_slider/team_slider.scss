@@ -1,0 +1,10 @@
+.team_slider {
+  background: #F3F8FD;
+  padding-top: 40px;
+  @media ($tablet2) {
+    padding-top: 70px;
+  }
+  @media ($tablet3) {
+    padding-top: 20px;
+  }
+}

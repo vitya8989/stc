@@ -20,4 +20,22 @@
     background: #EC8E00;
     color: #055FB3;
   }
+
+  &.this--transparent_blue {
+    background: transparent;
+    border: 2px solid #055FB3;
+    color: #055FB3;
+
+    &:hover {
+      @media ($tablet2Max) {
+        color: #ffffff;
+        background: #055FB3;
+      }
+    }
+    &:active {
+      color: #FFA113!important;
+      background: #2779C6!important;
+      border: 2px solid #2779C6!important;
+    }
+  }
 }

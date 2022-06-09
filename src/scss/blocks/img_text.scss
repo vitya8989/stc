@@ -1,0 +1,40 @@
+.img_text {
+  display: flex;
+  @media ($tablet2) {
+   flex-wrap: wrap;
+  }
+  &.this--reverse {
+    @media ($tablet2Max) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+.img_text__img_wr {
+  width: 387px;
+  flex: 0 0 auto;
+  margin-right: 60px;
+  .img_text.this--reverse & {
+    @media ($tablet2Max) {
+      margin-right: 0;
+      margin-left: 60px;
+    }
+  }
+
+  @media ($tablet2) {
+    margin: 0 auto;
+  }
+  @media ($tablet3) {
+    width: 100%;
+    margin: 0;
+  }
+}
+.img_text__img {
+  img {
+    width: 100%;
+  }
+}
+.img_text__text {
+  @media ($tablet2) {
+    margin-top: 30px;
+  }
+}

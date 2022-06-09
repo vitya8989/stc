@@ -1,0 +1,110 @@
+.news__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin-top: 50px;
+  margin-left: -15px;
+  @media ($mobile) {
+    margin-left: -8px;
+  }
+}
+.news__pagination_item {
+  margin-left: 15px;
+  @media ($mobile) {
+    margin-left: 8px;
+  }
+
+  &.this--no_mobile {
+    @media ($tablet3) {
+      display: none;
+    }
+  }
+}
+
+.news__pagination_ellipsis {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.67;
+  color: #055FB3;
+}
+.news__pagination_link {
+  border: 2px solid transparent;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.67;
+  color: #055FB3;
+  transition: 0.25s;
+  &:hover {
+    @media ($tablet2Max) {
+      border: 2px solid #FFA113;
+      background: #FFA113;
+      color: #0F1011;
+    }
+  }
+  &.active {
+    border: 2px solid #FFA113;
+    color: #0F1011;
+  }
+}
+.news__pagination_prev_arrow,
+.news__pagination_next_arrow {
+  border: 2px solid transparent;
+  flex: 0 0 auto;
+  position: relative;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.25s;
+  background: rgba(5, 95, 179, 0.2);
+  &:hover {
+    @media ($tablet2Max) {
+      background: #055FB3;
+      &::after,
+      &::before {
+        background: #ffffff;
+      }
+    }
+  }
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    background: #ffffff;
+    width: 12px;
+    height: 2px;
+    transition: 0.25s;
+    left: calc(50% - 5px);
+  }
+  &::after {
+    top: 18px;
+    transform: rotate(45deg);
+  }
+  &::before {
+    bottom: 19px;
+    transform: rotate(-45deg);
+  }
+
+  &.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}
+.news__pagination_prev_arrow {
+  transform: rotate(180deg);
+}

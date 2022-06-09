@@ -1,17 +1,17 @@
 const mainNewsItems = document.querySelector('.main_news__items');
-const mainNewsItem = document.querySelectorAll('.main_news__item');
+const jsMainNewsItem = document.querySelectorAll('.js_main_news_item');
 const mainNewsMobSliderWrapper = document.querySelector('.main_news__mob_slider_wrapper');
 let mainNewsMobSlider = undefined;
 
 function mainNewsTabletChange959(e) {
     if (e.matches) {
-       if (mainNewsItem[0].classList.contains('this--big')) {
-           mainNewsItem[0].classList.remove('this--big');
+       if (jsMainNewsItem[0].classList.contains('this--big')) {
+           jsMainNewsItem[0].classList.remove('this--big');
        }
-       for (let i = 0; i < mainNewsItem.length; i++) {
-           mainNewsItem[i].classList.add('swiper-slide');
-           mainNewsItem[i].classList.add('main_news__mob_slider_slide');
-           mainNewsMobSliderWrapper.append(mainNewsItem[i]);
+       for (let i = 0; i < jsMainNewsItem.length; i++) {
+           jsMainNewsItem[i].classList.add('swiper-slide');
+           jsMainNewsItem[i].classList.add('main_news__mob_slider_slide');
+           mainNewsMobSliderWrapper.append(jsMainNewsItem[i]);
        }
        if (mainNewsMobSlider == undefined) {
            mainNewsMobSlider = new Swiper('.main_news__mob_slider', {
@@ -32,11 +32,11 @@ function mainNewsTabletChange959(e) {
        }
 
     } else {
-        mainNewsItem[0].classList.add('this--big');
-        for (let i = 0; i < mainNewsItem.length; i++) {
-            mainNewsItem[i].classList.remove('swiper-slide');
-            mainNewsItem[i].classList.remove('main_news__mob_slider_slide');
-            mainNewsItems.append(mainNewsItem[i]);
+        jsMainNewsItem[0].classList.add('this--big');
+        for (let i = 0; i < jsMainNewsItem.length; i++) {
+            jsMainNewsItem[i].classList.remove('swiper-slide');
+            jsMainNewsItem[i].classList.remove('main_news__mob_slider_slide');
+            mainNewsItems.append(jsMainNewsItem[i]);
         }
         if (mainNewsMobSlider != undefined) {
             mainNewsMobSlider.destroy();
@@ -44,7 +44,7 @@ function mainNewsTabletChange959(e) {
         }
     }
 }
-if (mainNewsItems && mainNewsItem && mainNewsMobSliderWrapper) {
+if (mainNewsItems && jsMainNewsItem && mainNewsMobSliderWrapper) {
     mediaQuery959.addListener(mainNewsTabletChange959);
     mainNewsTabletChange959(mediaQuery959);
 }

@@ -76,6 +76,7 @@ li::marker {
 @import "./blocks/title";
 @import "./blocks/btn";
 @import "./blocks/card";
+@import "./blocks/img_text";
 
 @import "../components/header/header";
 @import "../components/footer/footer";
@@ -97,3 +98,14 @@ li::marker {
 @import "../components/patents/patents_top/patents_top";
 @import "../components/patents/patents_system/patents_system";
 @import "../components/patents/patents_bottom/patents_bottom";
+
+@import "../components/team/team_top/team_top";
+@import "../components/team/team_list/team_list";
+@import "../components/team/team_slider/team_slider";
+@import "../components/team/team_social/team_social";
+
+@import "../components/opportunities/opportunities_top/opportunities_top";
+
+@import "../components/news/news";
+
+@import "../components/new/new";

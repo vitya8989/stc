@@ -1,0 +1,15 @@
+.opportunities_top {
+  @media ($tablet2) {
+    padding-bottom: 100px!important;
+  }
+  @media ($tablet3) {
+    padding-bottom: 50px!important;
+  }
+}
+.opportunities_top__img_text {
+  margin-top: 60px;
+  @media ($tablet3) {
+    margin-top: 30px;
+  }
+}
+
