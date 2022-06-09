@@ -1,28 +1,18 @@
-const showSubMenu = document.querySelectorAll('.js_show_submenu');
-
 const mediaQuery959 = window.matchMedia('(max-width: 959px)');
 function headerTabletChange959(e) {
     if (e.matches) {
         $('.js_show_submenu').each(function( index ) {
             $( this ).find('.js_submenu').slideUp();
-            $( this ).click(function() {
+            $( this ).click(function(e) {
                 $( this ).toggleClass('active');
                 $( this ).find('.js_submenu').slideToggle();
             });
         });
     } else {
-        for (let i = 0; i < showSubMenu.length; i++) {
-            showSubMenu[i].onclick = function () {
-                for (let j = 0; j < showSubMenu.length; j++) {
-                    if (showSubMenu[i] !== showSubMenu[j]) {
-                        showSubMenu[j].classList.remove('active');
-                        showSubMenu[j].querySelector('.js_submenu').classList.remove('show');
-                    }
-                }
-                showSubMenu[i].classList.toggle('active');
-                showSubMenu[i].querySelector('.js_submenu').classList.toggle('show');
-            }
-        }
+        $('.js_show_submenu').each(function( index ) {
+            $( this ).find('.js_submenu').slideDown();
+            $( this ).off( "click");
+        });
     }
 }
 mediaQuery959.addListener(headerTabletChange959);
@@ -54,23 +44,25 @@ if (mainHeaderWr) {
     })
 }
 ;
-new Swiper('.main_slider__slider', {
-    speed: 500,
-    slidesPerView: 1,
-    spaceBetween: 20,
-    navigation: {
-        nextEl: '.main_slider__btn_next',
-        prevEl: '.main_slider__btn_prev'
-    },
-    pagination: {
-        el: '.main_slider__pagination',
-        clickable: true,
-    },
-    autoHeight: true,
-    // autoplay: {
-    //     delay: 6850,
-    //     disableOnInteraction: false,
-    // },
+window.addEventListener('load', function() {
+    new Swiper('.main_slider__slider', {
+        speed: 500,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.main_slider__btn_next',
+            prevEl: '.main_slider__btn_prev'
+        },
+        pagination: {
+            el: '.main_slider__pagination',
+            clickable: true,
+        },
+        autoHeight: true,
+        // autoplay: {
+        //     delay: 6850,
+        //     disableOnInteraction: false,
+        // },
+    });
 });
 ;
 const mainNewsItems = document.querySelector('.main_news__items');
@@ -176,4 +168,69 @@ new Swiper('.patents_cards__slider', {
         }
     }
 });
-;
+
+new Swiper('.certificate_cards__slider', {
+    speed: 700,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoHeight: true,
+    navigation: {
+        nextEl: '.certificate_cards__slider_btn_next',
+        prevEl: '.certificate_cards__slider_btn_prev'
+    },
+    pagination: {
+        el: '.certificate_cards__slider_pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        500: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        960: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 60,
+        }
+    }
+});
+
+new Swiper('.diploms_cards__slider', {
+    speed: 700,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    autoHeight: true,
+    navigation: {
+        nextEl: '.diploms_cards__slider_btn_next',
+        prevEl: '.diploms_cards__slider_btn_prev'
+    },
+    pagination: {
+        el: '.diploms_cards__slider_pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        500: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        960: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 60,
+        }
+    }
+});;

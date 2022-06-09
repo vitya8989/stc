@@ -454,6 +454,11 @@ h2 {
   transition: 0.25s;
 }
 
+.header__menu_item.this--submenu:hover > .header__submenu {
+  opacity: 1;
+  visibility: visible;
+}
+
 .header__menu_link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -481,16 +486,12 @@ h2 {
   background: #ffffff;
   top: 100%;
   left: 0;
-  padding: 25px 18px 5px;
+  padding: 15px 0;
   list-style-type: none;
   text-transform: none;
   -webkit-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
-}
-
-.header__submenu_item {
-  margin-bottom: 20px;
 }
 
 .header__submenu_link {
@@ -500,10 +501,8 @@ h2 {
   -webkit-transition: 0.25s;
   -o-transition: 0.25s;
   transition: 0.25s;
-}
-
-.header__submenu_link:active {
-  color: #2779C6;
+  padding: 10px 18px;
+  display: block;
 }
 
 .header__burger {
@@ -907,6 +906,16 @@ h2 {
   position: absolute;
   left: 0;
   top: 0;
+}
+
+.main_slider__video::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .main_slider__video video {
@@ -2209,14 +2218,12 @@ h2 {
     border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
 
-  .header__menu_item.this--submenu:hover,
-  .header__menu_item.this--submenu.active {
+  .header__menu_item.this--submenu:hover {
     color: #FFA113;
     background: rgba(0, 0, 0, 0.1);
   }
 
-  .header__menu_item.this--submenu:hover svg path,
-  .header__menu_item.this--submenu.active svg path {
+  .header__menu_item.this--submenu:hover svg path {
     stroke: #FFA113;
   }
 
@@ -2230,13 +2237,19 @@ h2 {
     visibility: hidden;
   }
 
-  .header__submenu.show {
+  .header__submenu:hover {
     opacity: 1;
     visibility: visible;
   }
 
   .header__submenu_link:hover {
-    color: #055FB3;
+    color: #FFFFFF;
+    background: #055FB3;
+  }
+
+  .header__submenu_link:active {
+    color: #FFA113;
+    background: #055FB3;
   }
 
   .mobile_bottom {
@@ -2718,15 +2731,20 @@ h2 {
     background: #055FB3;
   }
 
-  .header__submenu_item:last-child {
-    margin-bottom: 0;
+  .header__submenu_item {
+    margin-bottom: 20px;
   }
 
   .header__submenu_item:first-child {
     margin-top: 15px;
   }
 
+  .header__submenu_item:last-child {
+    margin-bottom: 0;
+  }
+
   .header__submenu_link {
+    padding: 0;
     color: #ffffff;
     font-weight: 400;
   }
