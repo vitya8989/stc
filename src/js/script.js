@@ -5,3 +5,5 @@
 @@include('../components/patents/patents_bottom/patents_bottom.js');
 @@include('../components/team/team_slider/team_slider.js');
 @@include('../components/news/news.js');
+@@include('../components/products/products.js');
+@@include('../components/contacts/contacts_map/contacts_map.js');
