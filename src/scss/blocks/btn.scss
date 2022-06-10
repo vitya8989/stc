@@ -38,4 +38,20 @@
       border: 2px solid #2779C6!important;
     }
   }
+  &.this--transparent_wh {
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+
+    &:hover {
+      @media ($tablet2Max) {
+        color: #055FB3;
+        background: #FFFFFF;
+      }
+    }
+    &:active {
+      color: #0F1011!important;
+      background: #ffffff!important;
+    }
+  }
 }

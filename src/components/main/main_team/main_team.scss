@@ -217,4 +217,19 @@
       }
     }
   }
+  &.this--no_scale {
+    img {
+      &:hover {
+        @media ($tablet2Max) {
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+.default_slider__slide_text {
+  font-size: 1.4rem;
+  line-height: 1.71;
+  color: #8A8E93;
+  margin-top: 15px;
 }

@@ -7,3 +7,4 @@
 @@include('../components/news/news.js');
 @@include('../components/products/products.js');
 @@include('../components/contacts/contacts_map/contacts_map.js');
+@@include('../components/type/type.js');
