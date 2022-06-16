@@ -310,7 +310,7 @@ h3.this--mt_20 {
   background: #ffffff;
 }
 
-.main_header_wr .header__top {
+.header.this--transparent .header__top {
   background: transparent;
 }
 
@@ -350,11 +350,11 @@ h3.this--mt_20 {
   color: #2779C6;
 }
 
-.main_header_wr .header__top_menu_link {
+.header.this--transparent .header__top_menu_link {
   color: #FFFFFF;
 }
 
-.main_header_wr .header__top_menu_link:active {
+.header.this--transparent .header__top_menu_link:active {
   color: #FFA113;
 }
 
@@ -377,6 +377,10 @@ h3.this--mt_20 {
       -ms-flex-align: center;
           align-items: center;
   white-space: nowrap;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
+  color: #0F1011;
 }
 
 .header_city svg,
@@ -384,33 +388,25 @@ h3.this--mt_20 {
   margin-right: 10px;
 }
 
-.header_city a,
-.header_tel a {
-  -webkit-transition: 0.25s;
-  -o-transition: 0.25s;
-  transition: 0.25s;
-  color: #0F1011;
-}
-
-.header_city a:active,
-.header_tel a:active {
+.header_city:active,
+.header_tel:active {
   color: #2779C6;
 }
 
-.main_header_wr .header_city a,
-.main_header_wr
-.header_tel a {
+.header.this--transparent .header_city,
+.header.this--transparent
+.header_tel {
   color: #FFFFFF;
 }
 
-.main_header_wr .header_city a:active,
-.main_header_wr
-.header_tel a:active {
+.header.this--transparent .header_city:active,
+.header.this--transparent
+.header_tel:active {
   color: #FFA113;
 }
 
-.main_header_wr .header_city svg path,
-.main_header_wr
+.header.this--transparent .header_city svg path,
+.header.this--transparent
 .header_tel svg path {
   fill: #ffffff;
   -webkit-transition: 0.25s;
@@ -422,7 +418,7 @@ h3.this--mt_20 {
   background: #055FB3;
 }
 
-.main_header_wr .header__bottom {
+.header.this--transparent .header__bottom {
   background: rgba(0, 75, 145, 0.6);
 }
 
@@ -541,8 +537,6 @@ h3.this--mt_20 {
   position: absolute;
   text-align: left;
   background: #ffffff;
-  -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
   top: 100%;
   left: 0;
   padding: 15px 0;
@@ -737,6 +731,13 @@ h3.this--mt_20 {
 .footer__column {
   width: calc(25% - 60px);
   margin-left: 60px;
+}
+
+.footer__column .mobile_bottom__tel {
+  color: #ffffff;
+  -webkit-transition: 0.25s;
+  -o-transition: 0.25s;
+  transition: 0.25s;
 }
 
 .footer__logo {
@@ -2179,7 +2180,7 @@ h3.this--mt_20 {
   line-height: 1.56;
 }
 
-.patents_top__title {
+.patents_top {
   margin-bottom: 50px;
 }
 
@@ -2234,7 +2235,7 @@ h3.this--mt_20 {
   color: #055FB3;
 }
 
-.team_top__title {
+.team_top {
   margin-bottom: 50px;
 }
 
@@ -2863,6 +2864,7 @@ h3.this--mt_20 {
 
 .page_404 {
   background: url("../img/page_404/page_404_bg.jpg") center/cover no-repeat;
+  padding-top: 179px;
 }
 
 .page_404__content {
@@ -3141,23 +3143,23 @@ h3.this--mt_20 {
     color: #055FB3;
   }
 
-  .main_header_wr .header__top_menu_link:hover {
+  .header.this--transparent .header__top_menu_link:hover {
     color: #FFA113;
   }
 
-  .header_city a:hover,
-  .header_tel a:hover {
+  .header_city:hover,
+  .header_tel:hover {
     color: #055FB3;
   }
 
-  .main_header_wr .header_city a:hover,
-  .main_header_wr
-  .header_tel a:hover {
+  .header.this--transparent .header_city:hover,
+  .header.this--transparent
+  .header_tel:hover {
     color: #FFA113;
   }
 
-  .main_header_wr .header_city:hover svg path,
-  .main_header_wr
+  .header.this--transparent .header_city:hover svg path,
+  .header.this--transparent
   .header_tel:hover svg path {
     fill: #FFA113;
   }
@@ -3185,6 +3187,8 @@ h3.this--mt_20 {
   }
 
   .header__submenu {
+    -webkit-box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
   }
@@ -3212,7 +3216,7 @@ h3.this--mt_20 {
     display: none;
   }
 
-  .footer__column .mobile_bottom__tel:hover a {
+  .footer__column .mobile_bottom__tel:hover {
     color: #FFA113;
   }
 
@@ -3822,7 +3826,7 @@ h3.this--mt_20 {
     display: none;
   }
 
-  .main_header_wr .header__bottom {
+  .header.this--transparent .header__bottom {
     background: #055FB3;
   }
 
@@ -4279,6 +4283,10 @@ h3.this--mt_20 {
 
   .contacts_top__groups {
     margin-top: 30px;
+  }
+
+  .page_404 {
+    padding-top: 70px;
   }
 
   .page_404__content {

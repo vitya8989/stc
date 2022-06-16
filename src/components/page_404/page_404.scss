@@ -1,5 +1,10 @@
 .page_404 {
   background: url('../img/page_404/page_404_bg.jpg') center / cover no-repeat;
+  padding-top: 179px;
+
+  @media ($tablet2) {
+    padding-top: 70px;
+  }
 }
 .page_404__content {
   padding-top: 140px;

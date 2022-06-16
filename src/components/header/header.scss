@@ -5,7 +5,7 @@
 }
 .header__top {
   background: #ffffff;
-  .main_header_wr & {
+  .header.this--transparent & {
     background: transparent;
   }
   @media ($tablet2) {
@@ -37,7 +37,7 @@
   &:active {
     color: #2779C6;
   }
-  .main_header_wr & {
+  .header.this--transparent & {
     color: #FFFFFF;
     &:hover {
       @media ($tablet2Max) {
@@ -63,30 +63,23 @@
   svg {
     margin-right: 10px;
   }
-  a {
-    transition: 0.25s;
-    color: #0F1011;
-    &:hover {
-      @media ($tablet2Max) {
+  &:hover {
+    @media ($tablet2Max) {
         color: #055FB3;
-      }
-    }
-    &:active {
-      color: #2779C6;
-    }
-    .main_header_wr & {
-      color: #FFFFFF;
-      &:hover {
-        @media ($tablet2Max) {
-          color: #FFA113;
-        }
-      }
-      &:active {
-        color: #FFA113;
-      }
     }
   }
-  .main_header_wr & {
+
+  transition: 0.25s;
+  color: #0F1011;
+  &:active {
+    color: #2779C6;
+  }
+
+  .header.this--transparent & {
+    color: #FFFFFF;
+    &:active {
+      color: #FFA113;
+    }
     svg {
       path {
         fill: #ffffff;
@@ -95,6 +88,7 @@
     }
     &:hover {
       @media ($tablet2Max) {
+          color: #FFA113;
         svg {
           path {
             fill: #FFA113;
@@ -107,7 +101,7 @@
 
 .header__bottom {
   background: #055FB3;
-  .main_header_wr & {
+  .header.this--transparent & {
     background: rgba(0, 75, 145, 0.6);
     @media ($tablet2) {
       background: #055FB3;
@@ -298,7 +292,6 @@
   position: absolute;
   text-align: left;
   background: #ffffff;
-  box-shadow: 0 3px 7px 0 rgba(0,0,0,0.3);
   top: 100%;
   left: 0;
   padding: 15px 0;
@@ -306,6 +299,7 @@
   text-transform: none;
   transition: 0.25s;
   @media ($tablet2Max) {
+    box-shadow: 0 3px 7px 0 rgba(0,0,0,0.3);
     opacity: 0;
     visibility: hidden;
 

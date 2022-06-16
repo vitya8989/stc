@@ -39,11 +39,11 @@
   }
 
   .mobile_bottom__tel {
+    color: #ffffff;
+    transition: 0.25s;
     &:hover {
       @media ($tablet2Max) {
-        a {
           color: #FFA113;
-        }
         svg {
           path {
             fill: #FFA113;

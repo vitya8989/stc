@@ -33,13 +33,13 @@ headerBurger.onclick = function () {
     mobileMenu.classList.toggle('menu-open');
 }
 
-const mainHeaderWr = document.querySelector('.main_header_wr');
-if (mainHeaderWr) {
+const header = document.querySelector('.header');
+if (header.classList.contains('this--transparent')) {
     window.addEventListener('scroll', function () {
         if (pageYOffset > 10) {
-            mainHeaderWr.classList.remove('main_header_wr');
+            header.classList.remove('this--transparent');
         } else {
-            mainHeaderWr.classList.add('main_header_wr');
+            header.classList.add('this--transparent');
         }
     })
 }
