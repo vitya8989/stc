@@ -12,13 +12,7 @@
 .news__pagination_item {
   margin-left: 15px;
   @media ($mobile) {
-    margin-left: 8px;
-  }
-
-  &.this--no_mobile {
-    @media ($tablet3) {
-      display: none;
-    }
+    margin-left: 12px;
   }
 }
 
@@ -34,6 +28,10 @@
   font-size: 1.5rem;
   line-height: 1.67;
   color: #055FB3;
+
+  @media ($mobile) {
+    width: 20px;
+  }
 }
 .news__pagination_link {
   border: 2px solid transparent;
@@ -56,8 +54,14 @@
     }
   }
   &.active {
-    border: 2px solid #FFA113;
+    @media ($tablet2Max) {
+      border: 2px solid #FFA113;
+    }
     color: #0F1011;
+    pointer-events: none;
+  }
+  @media ($mobile) {
+    width: 20px;
   }
 }
 .news__pagination_prev_arrow,

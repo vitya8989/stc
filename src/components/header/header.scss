@@ -102,7 +102,7 @@
 .header__bottom {
   background: #055FB3;
   .header.this--transparent & {
-    background: rgba(0, 75, 145, 0.6);
+    background: linear-gradient(180deg, rgba(0, 75, 145, 0.6), #055FB3);
     @media ($tablet2) {
       background: #055FB3;
     }

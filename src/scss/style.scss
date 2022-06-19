@@ -68,9 +68,10 @@ main {
 		padding-top: 0;
 	}
 }
-
-li::marker {
-	color: #FFA113;
+.orange_ul {
+	li::marker {
+		color: #FFA113;
+	}
 }
 
 @import "./blocks/title";
